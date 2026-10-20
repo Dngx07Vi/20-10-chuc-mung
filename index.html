@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>20/10 — Lời chúc cho những người phụ nữ</title>
+<link rel="icon" type="image/png" href="Vietnamese Women’s Day Floral Celebration Badge.png">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    background:#fff7fb;color:#3b2633;overflow-x:hidden
+  }
+  .bg{
+    position:fixed;inset:0;z-index:-2;
+    background:
+      radial-gradient(circle at 15% 20%,#ffd6e7 0 12%,transparent 30%),
+      radial-gradient(circle at 85% 15%,#ffe5bd 0 10%,transparent 28%),
+      linear-gradient(135deg,#fff8fc,#fff1f6 55%,#fff8e9)
+  }
+  .petal{
+    position:fixed;top:-30px;width:12px;height:18px;
+    background:#f7a9c4;border-radius:80% 20% 80% 20%;
+    opacity:.7;animation:fall linear infinite;z-index:-1
+  }
+  @keyframes fall{to{transform:translateY(110vh) rotate(500deg)}}
+  header{
+    min-height:100vh;display:grid;place-items:center;text-align:center;padding:40px 20px
+  }
+  .card{
+    max-width:900px;padding:55px 35px;border:1px solid rgba(255,255,255,.8);
+    border-radius:32px;background:rgba(255,255,255,.55);
+    backdrop-filter:blur(14px);box-shadow:0 25px 80px rgba(153,75,112,.15)
+  }
+  .date{letter-spacing:6px;font-weight:700;color:#c84f7d;font-size:15px}
+  h1{
+    margin:18px 0;font-size:clamp(55px,11vw,120px);line-height:.9;
+    background:linear-gradient(135deg,#bd3f70,#e9789f,#d99b35);
+    -webkit-background-clip:text;color:transparent
+  }
+  .typing{font-size:clamp(20px,3vw,30px);min-height:45px}
+  .sub{margin:22px auto 30px;max-width:650px;line-height:1.7;color:#6d5360}
+  button{
+    border:0;padding:14px 25px;border-radius:999px;background:#c94d7c;color:white;
+    font-size:16px;cursor:pointer;box-shadow:0 10px 25px #c94d7c40;transition:.25s
+  }
+  button:hover{transform:translateY(-3px) scale(1.02)}
+  section{padding:80px 20px;max-width:1050px;margin:auto}
+  .title{text-align:center;font-size:clamp(30px,5vw,48px);margin-bottom:45px}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .item{
+    background:white;border-radius:24px;padding:30px;min-height:210px;
+    box-shadow:0 12px 40px #8f4a6815;transition:.3s
+  }
+  .item:hover{transform:translateY(-8px)}
+  .icon{font-size:42px;margin-bottom:18px}
+  .item h3{margin-bottom:10px;color:#b83f6e}
+  .item p{line-height:1.65;color:#705d65}
+  .wish{
+    text-align:center;background:linear-gradient(135deg,#c64e7d,#e58ca8);
+    color:white;border-radius:35px;padding:65px 25px;box-shadow:0 25px 70px #c64e7d30
+  }
+  .wish h2{font-size:clamp(32px,6vw,58px);margin-bottom:18px}
+  .wish p{max-width:700px;margin:auto;line-height:1.8;font-size:18px}
+  footer{text-align:center;padding:50px 20px;color:#8b6978}
+  #toast{
+    position:fixed;left:50%;bottom:30px;transform:translate(-50%,30px);
+    background:#3b2633;color:white;padding:15px 22px;border-radius:999px;
+    opacity:0;pointer-events:none;transition:.35s;z-index:20
+  }
+  #toast.show{opacity:1;transform:translate(-50%,0)}
+  @media(max-width:700px){.grid{grid-template-columns:1fr}.card{padding:40px 20px}}
+</style>
+</head>
+<body>
+<div class="bg"></div>
+<div id="petals"></div>
+
+<header>
+  <div class="card">
+    <div class="date">20 • 10 • 2026</div>
+    <h1>20/10</h1>
+    <div class="typing" id="typing"></div>
+    <p class="sub">
+      Một ngày đặc biệt để gửi những lời yêu thương, sự biết ơn
+      và những điều tốt đẹp nhất đến những người phụ nữ tuyệt vời.
+    </p>
+    <button onclick="celebrate()">💗 Nhận một lời chúc</button>
+  </div>
+</header>
+
+<section>
+  <h2 class="title">🌷 Những điều xứng đáng dành cho bạn</h2>
+  <div class="grid">
+    <div class="item">
+      <div class="icon">🌸</div><h3>Luôn xinh đẹp</h3>
+      <p>Không chỉ bởi vẻ ngoài, mà bởi sự tử tế, mạnh mẽ và cách bạn làm thế giới trở nên ấm áp hơn.</p>
+    </div>
+    <div class="item">
+      <div class="icon">✨</div><h3>Luôn tỏa sáng</h3>
+      <p>Mong bạn luôn tự tin theo đuổi điều mình muốn và không ngại trở thành phiên bản tốt hơn của chính mình.</p>
+    </div>
+    <div class="item">
+      <div class="icon">💐</div><h3>Luôn hạnh phúc</h3>
+      <p>Mong những ngày phía trước có thật nhiều niềm vui, bình yên và những người luôn trân trọng bạn.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wish">
+    <h2>Chúc mừng ngày 20/10 💖</h2>
+    <p>
+      Chúc bạn luôn vui vẻ, xinh đẹp, mạnh mẽ và được yêu thương theo cách
+      mà bạn xứng đáng. Cảm ơn vì đã khiến cuộc sống này trở nên dịu dàng hơn.
+    </p>
+  </div>
+</section>
+
+<footer>
+  Made with Hoang Manh Dung for Vietnamese Women's Day 💗 — 20/10/2026
+</footer>
+
+<div id="toast"></div>
+
+<script>
+const text = "Gửi những điều dịu dàng nhất đến bạn...";
+let i=0;
+function type(){
+  if(i<=text.length){
+    document.getElementById("typing").textContent=text.slice(0,i++);
+    setTimeout(type,55);
+  }
+}
+type();
+
+const petals=document.getElementById("petals");
+for(let i=0;i<28;i++){
+  const p=document.createElement("span");
+  p.className="petal";
+  p.style.left=Math.random()*100+"vw";
+  p.style.animationDuration=(5+Math.random()*8)+"s";
+  p.style.animationDelay=(-Math.random()*10)+"s";
+  p.style.transform=`scale(${.5+Math.random()})`;
+  petals.appendChild(p);
+}
+
+function celebrate(){
+const messages=[
+    "🌷 Chúc bạn 20/10 thật vui và thật nhiều yêu thương!",
+    "💖 Bạn xứng đáng với những điều tuyệt vời nhất!",
+    "✨ Mong hôm nay và mọi ngày đều có thật nhiều niềm vui!",
+    "🌸 Chúc bạn luôn xinh đẹp, tự tin và hạnh phúc!",
+    "🌹 Chúc bạn luôn được yêu thương, trân trọng và có thật nhiều khoảnh khắc đáng nhớ!",
+    "🦋 Mong mọi ước mơ của bạn đều dần trở thành hiện thực, mỗi ngày đều có một lý do để mỉm cười!"
+];
+  const toast=document.getElementById("toast");
+  toast.textContent=messages[Math.floor(Math.random()*messages.length)];
+  toast.classList.add("show");
+  setTimeout(()=>toast.classList.remove("show"),3500);
+
+  for(let j=0;j<18;j++){
+    const e=document.createElement("div");
+    e.textContent=["💗","🌸","✨","💐"][Math.floor(Math.random()*4)];
+    e.style.cssText=`position:fixed;left:${50+(Math.random()*20-10)}%;top:55%;
+      font-size:${18+Math.random()*22}px;z-index:30;pointer-events:none;
+      transition:1.2s ease-out;`;
+    document.body.appendChild(e);
+    requestAnimationFrame(()=>{
+      e.style.transform=`translate(${(Math.random()*2-1)*260}px,${-150-Math.random()*300}px) rotate(${Math.random()*360}deg)`;
+      e.style.opacity="0";
+    });
+    setTimeout(()=>e.remove(),1300);
+  }
+}
+</script>
+</body>
+</html>
