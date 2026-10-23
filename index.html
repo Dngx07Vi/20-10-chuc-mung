@@ -3,177 +3,1247 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>20/10 — Lời chúc cho những người phụ nữ</title>
-<link rel="icon" type="image/png" href="Vietnamese Women’s Day Floral Celebration Badge.png">
+
+<link rel="icon"
+      type="image/png"
+      href="Vietnamese Women’s Day Floral Celebration Badge.png">
+
 <style>
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{
-    font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-    background:#fff7fb;color:#3b2633;overflow-x:hidden
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0
+}
+
+html{
+  scroll-behavior:smooth
+}
+
+body{
+  font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  background:#fff7fb;
+  color:#3b2633;
+  overflow-x:hidden
+}
+
+/* =========================
+   BACKGROUND
+========================= */
+
+.bg{
+  position:fixed;
+  inset:0;
+  z-index:-2;
+
+  background:
+    radial-gradient(circle at 15% 20%,#ffd6e7 0 12%,transparent 30%),
+    radial-gradient(circle at 85% 15%,#ffe5bd 0 10%,transparent 28%),
+    linear-gradient(135deg,#fff8fc,#fff1f6 55%,#fff8e9)
+}
+
+.petal{
+  position:fixed;
+  top:-30px;
+  width:12px;
+  height:18px;
+  background:#f7a9c4;
+  border-radius:80% 20% 80% 20%;
+  opacity:.7;
+  animation:fall linear infinite;
+  z-index:-1
+}
+
+@keyframes fall{
+  to{
+    transform:translateY(110vh) rotate(500deg)
   }
-  .bg{
-    position:fixed;inset:0;z-index:-2;
-    background:
-      radial-gradient(circle at 15% 20%,#ffd6e7 0 12%,transparent 30%),
-      radial-gradient(circle at 85% 15%,#ffe5bd 0 10%,transparent 28%),
-      linear-gradient(135deg,#fff8fc,#fff1f6 55%,#fff8e9)
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+  min-height:100vh;
+  display:grid;
+  place-items:center;
+  text-align:center;
+  padding:40px 20px
+}
+
+.card{
+  max-width:900px;
+  padding:55px 35px;
+  border:1px solid rgba(255,255,255,.8);
+  border-radius:32px;
+  background:rgba(255,255,255,.55);
+  backdrop-filter:blur(14px);
+  box-shadow:0 25px 80px rgba(153,75,112,.15)
+}
+
+.date{
+  letter-spacing:6px;
+  font-weight:700;
+  color:#c84f7d;
+  font-size:15px
+}
+
+h1{
+  margin:18px 0;
+  font-size:clamp(55px,11vw,120px);
+  line-height:.9;
+
+  background:linear-gradient(135deg,#bd3f70,#e9789f,#d99b35);
+  -webkit-background-clip:text;
+  color:transparent
+}
+
+.typing{
+  font-size:clamp(20px,3vw,30px);
+  min-height:45px
+}
+
+.sub{
+  margin:22px auto 30px;
+  max-width:650px;
+  line-height:1.7;
+  color:#6d5360
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+button{
+  border:0;
+  padding:14px 25px;
+  border-radius:999px;
+  background:#c94d7c;
+  color:white;
+  font-size:16px;
+  cursor:pointer;
+  box-shadow:0 10px 25px #c94d7c40;
+  transition:.25s
+}
+
+button:hover{
+  transform:translateY(-3px) scale(1.02)
+}
+
+.flower-btn{
+  background:linear-gradient(135deg,#d85c8a,#c44272);
+  margin-left:8px;
+}
+
+@media(max-width:600px){
+  .flower-btn{
+    margin-left:0;
+    margin-top:10px;
   }
-  .petal{
-    position:fixed;top:-30px;width:12px;height:18px;
-    background:#f7a9c4;border-radius:80% 20% 80% 20%;
-    opacity:.7;animation:fall linear infinite;z-index:-1
+}
+
+/* =========================
+   SECTION
+========================= */
+
+section{
+  padding:80px 20px;
+  max-width:1050px;
+  margin:auto
+}
+
+.title{
+  text-align:center;
+  font-size:clamp(30px,5vw,48px);
+  margin-bottom:45px
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px
+}
+
+.item{
+  background:white;
+  border-radius:24px;
+  padding:30px;
+  min-height:210px;
+  box-shadow:0 12px 40px #8f4a6815;
+  transition:.3s
+}
+
+.item:hover{
+  transform:translateY(-8px)
+}
+
+.icon{
+  font-size:42px;
+  margin-bottom:18px
+}
+
+.item h3{
+  margin-bottom:10px;
+  color:#b83f6e
+}
+
+.item p{
+  line-height:1.65;
+  color:#705d65
+}
+
+/* =========================
+   WISH
+========================= */
+
+.wish{
+  text-align:center;
+  background:linear-gradient(135deg,#c64e7d,#e58ca8);
+  color:white;
+  border-radius:35px;
+  padding:65px 25px;
+  box-shadow:0 25px 70px #c64e7d30
+}
+
+.wish h2{
+  font-size:clamp(32px,6vw,58px);
+  margin-bottom:18px
+}
+
+.wish p{
+  max-width:700px;
+  margin:auto;
+  line-height:1.8;
+  font-size:18px
+}
+
+/* =========================
+   FLOWER SECTION
+========================= */
+
+.flower-section{
+  text-align:center;
+}
+
+.flower-box{
+  position:relative;
+  overflow:hidden;
+
+  max-width:750px;
+  margin:auto;
+
+  padding:55px 30px;
+
+  border-radius:35px;
+
+  background:
+    radial-gradient(circle at 50% 30%,#fff4fa,#ffffff 65%);
+
+  border:1px solid #ffffff;
+
+  box-shadow:
+    0 20px 70px rgba(184,63,110,.13);
+}
+
+.flower-box-title{
+  font-size:15px;
+  letter-spacing:4px;
+  text-transform:uppercase;
+  color:#c84f7d;
+  font-weight:700;
+  margin-bottom:25px;
+}
+
+.flower-display{
+  font-size:100px;
+  line-height:1;
+  margin:10px 0 25px;
+
+  animation:flowerFloat 3s ease-in-out infinite;
+  filter:drop-shadow(0 12px 15px rgba(180,70,110,.18));
+}
+
+@keyframes flowerFloat{
+  0%,100%{
+    transform:translateY(0) rotate(-2deg)
   }
-  @keyframes fall{to{transform:translateY(110vh) rotate(500deg)}}
-  header{
-    min-height:100vh;display:grid;place-items:center;text-align:center;padding:40px 20px
+
+  50%{
+    transform:translateY(-10px) rotate(2deg)
   }
+}
+
+.flower-name{
+  font-size:32px;
+  color:#b83f6e;
+  margin-bottom:12px;
+}
+
+.flower-meaning{
+  font-size:17px;
+  color:#765d68;
+  line-height:1.7;
+  max-width:580px;
+  margin:auto auto 15px;
+}
+
+.flower-message{
+  font-size:19px;
+  line-height:1.7;
+  color:#4b3540;
+  font-style:italic;
+
+  max-width:600px;
+  margin:0 auto 30px;
+}
+
+.receive-flower{
+  background:linear-gradient(135deg,#d04f80,#e783a4);
+  padding:15px 28px;
+}
+
+/* =========================
+   FLOWER PARTICLES
+========================= */
+
+.flower-particle{
+  position:fixed;
+  pointer-events:none;
+  z-index:50;
+
+  font-size:25px;
+
+  transition:
+    transform 1.4s cubic-bezier(.2,.8,.2,1),
+    opacity 1.4s ease;
+}
+
+/* =========================
+   FLOWER MODAL
+========================= */
+
+.flower-modal{
+  position:fixed;
+  inset:0;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  padding:20px;
+
+  background:rgba(70,35,50,.35);
+  backdrop-filter:blur(8px);
+
+  z-index:100;
+
+  opacity:0;
+  visibility:hidden;
+
+  transition:.35s;
+}
+
+.flower-modal.show{
+  opacity:1;
+  visibility:visible;
+}
+
+.flower-modal-card{
+  width:min(520px,100%);
+
+  background:
+    radial-gradient(circle at top,#fff5fa,#ffffff 60%);
+
+  border-radius:35px;
+
+  padding:45px 30px;
+
+  text-align:center;
+
+  box-shadow:
+    0 30px 100px rgba(80,30,55,.25);
+
+  transform:translateY(30px) scale(.92);
+
+  transition:.4s;
+}
+
+.flower-modal.show .flower-modal-card{
+  transform:translateY(0) scale(1);
+}
+
+.modal-small-title{
+  color:#c84f7d;
+  letter-spacing:3px;
+  font-size:13px;
+  font-weight:700;
+  text-transform:uppercase;
+}
+
+.modal-flower{
+  font-size:105px;
+  margin:15px 0;
+
+  animation:
+    modalFlowerAppear .7s ease,
+    flowerFloat 3s ease-in-out infinite .7s;
+}
+
+@keyframes modalFlowerAppear{
+  0%{
+    opacity:0;
+    transform:scale(.2) rotate(-30deg);
+  }
+
+  70%{
+    transform:scale(1.15) rotate(8deg);
+  }
+
+  100%{
+    opacity:1;
+    transform:scale(1) rotate(0);
+  }
+}
+
+.modal-flower-name{
+  font-size:30px;
+  color:#b83f6e;
+  margin-bottom:10px;
+}
+
+.modal-meaning{
+  color:#765d68;
+  line-height:1.7;
+  margin-bottom:10px;
+}
+
+.modal-message{
+  font-size:17px;
+  line-height:1.7;
+  font-style:italic;
+  color:#4b3540;
+  margin-bottom:25px;
+}
+
+.close-flower{
+  background:#f1dbe4;
+  color:#9c4969;
+  margin-left:8px;
+  box-shadow:none;
+}
+
+.close-flower:hover{
+  background:#eacbd8;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+  text-align:center;
+  padding:50px 20px;
+  color:#8b6978
+}
+
+/* =========================
+   TOAST
+========================= */
+
+#toast{
+  position:fixed;
+  left:50%;
+  bottom:30px;
+
+  transform:translate(-50%,30px);
+
+  background:#3b2633;
+  color:white;
+
+  padding:15px 22px;
+  border-radius:999px;
+
+  opacity:0;
+  pointer-events:none;
+
+  transition:.35s;
+
+  z-index:20
+}
+
+#toast.show{
+  opacity:1;
+  transform:translate(-50%,0)
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:700px){
+
+  .grid{
+    grid-template-columns:1fr
+  }
+
   .card{
-    max-width:900px;padding:55px 35px;border:1px solid rgba(255,255,255,.8);
-    border-radius:32px;background:rgba(255,255,255,.55);
-    backdrop-filter:blur(14px);box-shadow:0 25px 80px rgba(153,75,112,.15)
+    padding:40px 20px
   }
-  .date{letter-spacing:6px;font-weight:700;color:#c84f7d;font-size:15px}
-  h1{
-    margin:18px 0;font-size:clamp(55px,11vw,120px);line-height:.9;
-    background:linear-gradient(135deg,#bd3f70,#e9789f,#d99b35);
-    -webkit-background-clip:text;color:transparent
+
+  .flower-display{
+    font-size:80px
   }
-  .typing{font-size:clamp(20px,3vw,30px);min-height:45px}
-  .sub{margin:22px auto 30px;max-width:650px;line-height:1.7;color:#6d5360}
-  button{
-    border:0;padding:14px 25px;border-radius:999px;background:#c94d7c;color:white;
-    font-size:16px;cursor:pointer;box-shadow:0 10px 25px #c94d7c40;transition:.25s
+
+  .flower-name{
+    font-size:27px
   }
-  button:hover{transform:translateY(-3px) scale(1.02)}
-  section{padding:80px 20px;max-width:1050px;margin:auto}
-  .title{text-align:center;font-size:clamp(30px,5vw,48px);margin-bottom:45px}
-  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-  .item{
-    background:white;border-radius:24px;padding:30px;min-height:210px;
-    box-shadow:0 12px 40px #8f4a6815;transition:.3s
+
+  .flower-box{
+    padding:45px 20px
   }
-  .item:hover{transform:translateY(-8px)}
-  .icon{font-size:42px;margin-bottom:18px}
-  .item h3{margin-bottom:10px;color:#b83f6e}
-  .item p{line-height:1.65;color:#705d65}
-  .wish{
-    text-align:center;background:linear-gradient(135deg,#c64e7d,#e58ca8);
-    color:white;border-radius:35px;padding:65px 25px;box-shadow:0 25px 70px #c64e7d30
+
+  .flower-modal-card{
+    padding:40px 20px
   }
-  .wish h2{font-size:clamp(32px,6vw,58px);margin-bottom:18px}
-  .wish p{max-width:700px;margin:auto;line-height:1.8;font-size:18px}
-  footer{text-align:center;padding:50px 20px;color:#8b6978}
-  #toast{
-    position:fixed;left:50%;bottom:30px;transform:translate(-50%,30px);
-    background:#3b2633;color:white;padding:15px 22px;border-radius:999px;
-    opacity:0;pointer-events:none;transition:.35s;z-index:20
+
+  .modal-flower{
+    font-size:85px
   }
-  #toast.show{opacity:1;transform:translate(-50%,0)}
-  @media(max-width:700px){.grid{grid-template-columns:1fr}.card{padding:40px 20px}}
+
+  .close-flower{
+    margin-left:0;
+    margin-top:10px;
+  }
+}
 </style>
 </head>
+
+
 <body>
+
 <div class="bg"></div>
+
 <div id="petals"></div>
 
+
+<!-- =========================
+     HEADER
+========================= -->
+
 <header>
+
   <div class="card">
-    <div class="date">20 • 10 • 2026</div>
+
+    <div class="date">
+      20 • 10 • 2026
+    </div>
+
     <h1>20/10</h1>
+
     <div class="typing" id="typing"></div>
+
     <p class="sub">
-      Một ngày đặc biệt để gửi những lời yêu thương, sự biết ơn
-      và những điều tốt đẹp nhất đến những người phụ nữ tuyệt vời.
+      Một ngày đặc biệt để gửi những lời yêu thương,
+      sự biết ơn và những điều tốt đẹp nhất
+      đến những người phụ nữ tuyệt vời.
     </p>
-    <button onclick="celebrate()">💗 Nhận một lời chúc</button>
+
+    <button onclick="celebrate()">
+      💗 Nhận một lời chúc
+    </button>
+
+    <button class="flower-btn" onclick="receiveFlower()">
+      🌷 Nhận một bông hoa
+    </button>
+
   </div>
+
 </header>
 
-<section>
-  <h2 class="title">🌷 Những điều xứng đáng dành cho bạn</h2>
-  <div class="grid">
-    <div class="item">
-      <div class="icon">🌸</div><h3>Luôn xinh đẹp</h3>
-      <p>Không chỉ bởi vẻ ngoài, mà bởi sự tử tế, mạnh mẽ và cách bạn làm thế giới trở nên ấm áp hơn.</p>
+
+<!-- =========================
+     FLOWER
+========================= -->
+
+<section class="flower-section">
+
+  <h2 class="title">
+    🌷 Bông hoa dành cho bạn
+  </h2>
+
+  <div class="flower-box">
+
+    <div class="flower-box-title">
+      Một món quà nhỏ dành riêng cho bạn
     </div>
-    <div class="item">
-      <div class="icon">✨</div><h3>Luôn tỏa sáng</h3>
-      <p>Mong bạn luôn tự tin theo đuổi điều mình muốn và không ngại trở thành phiên bản tốt hơn của chính mình.</p>
+
+    <div
+      class="flower-display"
+      id="flowerDisplay">
+      🌷
     </div>
-    <div class="item">
-      <div class="icon">💐</div><h3>Luôn hạnh phúc</h3>
-      <p>Mong những ngày phía trước có thật nhiều niềm vui, bình yên và những người luôn trân trọng bạn.</p>
-    </div>
+
+    <h3
+      class="flower-name"
+      id="flowerName">
+      Hoa Tulip
+    </h3>
+
+    <p
+      class="flower-meaning"
+      id="flowerMeaning">
+      Biểu tượng của tình yêu, sự dịu dàng
+      và những điều chân thành.
+    </p>
+
+    <p
+      class="flower-message"
+      id="flowerMessage">
+      "Mong bạn luôn được yêu thương,
+      trân trọng và có thật nhiều lý do để mỉm cười."
+    </p>
+
+    <button
+      class="receive-flower"
+      onclick="receiveFlower()">
+
+      🌸 Nhận một bông hoa khác
+
+    </button>
+
   </div>
+
 </section>
 
+
+<!-- =========================
+     WORTHY THINGS
+========================= -->
+
 <section>
-  <div class="wish">
-    <h2>Chúc mừng ngày 20/10 💖</h2>
-    <p>
-      Chúc bạn luôn vui vẻ, xinh đẹp, mạnh mẽ và được yêu thương theo cách
-      mà bạn xứng đáng. Cảm ơn vì đã khiến cuộc sống này trở nên dịu dàng hơn.
-    </p>
+
+  <h2 class="title">
+    🌷 Những điều xứng đáng dành cho bạn
+  </h2>
+
+  <div class="grid">
+
+    <div class="item">
+
+      <div class="icon">
+        🌸
+      </div>
+
+      <h3>
+        Luôn xinh đẹp
+      </h3>
+
+      <p>
+        Không chỉ bởi vẻ ngoài,
+        mà bởi sự tử tế, mạnh mẽ
+        và cách bạn làm thế giới
+        trở nên ấm áp hơn.
+      </p>
+
+    </div>
+
+
+    <div class="item">
+
+      <div class="icon">
+        ✨
+      </div>
+
+      <h3>
+        Luôn tỏa sáng
+      </h3>
+
+      <p>
+        Mong bạn luôn tự tin theo đuổi
+        điều mình muốn và không ngại
+        trở thành phiên bản tốt hơn
+        của chính mình.
+      </p>
+
+    </div>
+
+
+    <div class="item">
+
+      <div class="icon">
+        💐
+      </div>
+
+      <h3>
+        Luôn hạnh phúc
+      </h3>
+
+      <p>
+        Mong những ngày phía trước
+        có thật nhiều niềm vui,
+        bình yên và những người
+        luôn trân trọng bạn.
+      </p>
+
+    </div>
+
   </div>
+
 </section>
+
+
+<!-- =========================
+     WISH
+========================= -->
+
+<section>
+
+  <div class="wish">
+
+    <h2>
+      Chúc mừng ngày 20/10 💖
+    </h2>
+
+    <p>
+      Chúc bạn luôn vui vẻ, xinh đẹp,
+      mạnh mẽ và được yêu thương
+      theo cách mà bạn xứng đáng.
+
+      Cảm ơn vì đã khiến cuộc sống này
+      trở nên dịu dàng hơn.
+    </p>
+
+  </div>
+
+</section>
+
 
 <footer>
-  Made with Hoang Manh Dung for Vietnamese Women's Day 💗 — 20/10/2026
+
+  Made with Hoang Manh Dung
+  for Vietnamese Women's Day 💗
+  — 20/10/2026
+
 </footer>
+
+
+<!-- =========================
+     TOAST
+========================= -->
 
 <div id="toast"></div>
 
+
+<!-- =========================
+     FLOWER MODAL
+========================= -->
+
+<div
+  class="flower-modal"
+  id="flowerModal">
+
+  <div class="flower-modal-card">
+
+    <div class="modal-small-title">
+      🌷 Bông hoa dành cho bạn
+    </div>
+
+    <div
+      class="modal-flower"
+      id="modalFlower">
+      🌷
+    </div>
+
+    <h2
+      class="modal-flower-name"
+      id="modalFlowerName">
+      Hoa Tulip
+    </h2>
+
+    <p
+      class="modal-meaning"
+      id="modalMeaning">
+      Biểu tượng của tình yêu,
+      sự dịu dàng và những điều chân thành.
+    </p>
+
+    <p
+      class="modal-message"
+      id="modalMessage">
+      "Mong bạn luôn được yêu thương,
+      trân trọng và có thật nhiều lý do để mỉm cười."
+    </p>
+
+    <button
+      onclick="receiveFlower()">
+
+      🌸 Nhận hoa khác
+
+    </button>
+
+    <button
+      class="close-flower"
+      onclick="closeFlower()">
+
+      Đóng
+
+    </button>
+
+  </div>
+
+</div>
+
+
 <script>
-const text = "Gửi những điều dịu dàng nhất đến bạn...";
-let i=0;
+
+/* =========================================
+   TYPING EFFECT
+========================================= */
+
+const text =
+  "Gửi những điều dịu dàng nhất đến bạn...";
+
+let i = 0;
+
 function type(){
-  if(i<=text.length){
-    document.getElementById("typing").textContent=text.slice(0,i++);
+
+  if(i <= text.length){
+
+    document.getElementById("typing").textContent =
+      text.slice(0,i++);
+
     setTimeout(type,55);
+
   }
+
 }
+
 type();
 
-const petals=document.getElementById("petals");
-for(let i=0;i<28;i++){
-  const p=document.createElement("span");
-  p.className="petal";
-  p.style.left=Math.random()*100+"vw";
-  p.style.animationDuration=(5+Math.random()*8)+"s";
-  p.style.animationDelay=(-Math.random()*10)+"s";
-  p.style.transform=`scale(${.5+Math.random()})`;
+
+/* =========================================
+   FALLING PETALS
+========================================= */
+
+const petals =
+  document.getElementById("petals");
+
+for(let i = 0; i < 28; i++){
+
+  const p =
+    document.createElement("span");
+
+  p.className = "petal";
+
+  p.style.left =
+    Math.random() * 100 + "vw";
+
+  p.style.animationDuration =
+    (5 + Math.random() * 8) + "s";
+
+  p.style.animationDelay =
+    (-Math.random() * 10) + "s";
+
+  p.style.transform =
+    `scale(${.5 + Math.random()})`;
+
   petals.appendChild(p);
+
 }
+
+
+/* =========================================
+   FLOWER DATA
+========================================= */
+
+const flowers = [
+
+  {
+    emoji:"🌷",
+    name:"Hoa Tulip",
+    meaning:
+      "Biểu tượng của tình yêu, sự dịu dàng và những điều chân thành.",
+    message:
+      "Mong bạn luôn được yêu thương, trân trọng và có thật nhiều lý do để mỉm cười."
+  },
+
+  {
+    emoji:"🌹",
+    name:"Hoa Hồng",
+    meaning:
+      "Biểu tượng của tình yêu, vẻ đẹp và sự trân trọng.",
+    message:
+      "Bạn xứng đáng với một tình yêu đẹp, những điều tử tế và những người luôn thật lòng với bạn."
+  },
+
+  {
+    emoji:"🌻",
+    name:"Hoa Hướng Dương",
+    meaning:
+      "Biểu tượng của ánh sáng, niềm tin và sự lạc quan.",
+    message:
+      "Mong bạn luôn hướng về phía ánh sáng, dù hôm nay có khó khăn đến đâu."
+  },
+
+  {
+    emoji:"🌸",
+    name:"Hoa Anh Đào",
+    meaning:
+      "Biểu tượng của vẻ đẹp, sự nhẹ nhàng và những khởi đầu mới.",
+    message:
+      "Mong mỗi ngày của bạn đều có một điều nhỏ bé khiến trái tim mỉm cười."
+  },
+
+  {
+    emoji:"🌺",
+    name:"Hoa Dâm Bụt",
+    meaning:
+      "Biểu tượng của vẻ đẹp, sự tự tin và sức sống.",
+    message:
+      "Đừng quên rằng bạn đặc biệt theo cách riêng của mình. Hãy luôn tự tin là chính bạn."
+  },
+
+  {
+    emoji:"💐",
+    name:"Bó Hoa Hạnh Phúc",
+    meaning:
+      "Đại diện cho niềm vui, sự biết ơn và những điều tốt đẹp.",
+    message:
+      "Mong cuộc sống của bạn luôn có thật nhiều người yêu thương và những khoảnh khắc đáng nhớ."
+  },
+
+  {
+    emoji:"🪻",
+    name:"Hoa Lavender",
+    meaning:
+      "Biểu tượng của sự bình yên, dịu dàng và những tâm hồn đẹp.",
+    message:
+      "Mong bạn luôn có những ngày thật bình yên, ngủ thật ngon và không phải lo lắng quá nhiều."
+  },
+
+  {
+    emoji:"🌼",
+    name:"Hoa Cúc",
+    meaning:
+      "Biểu tượng của sự trong sáng, chân thành và niềm vui.",
+    message:
+      "Mong nụ cười của bạn luôn xuất hiện nhiều hơn những giọt nước mắt."
+  }
+
+];
+
+
+/* =========================================
+   RANDOM FLOWER
+========================================= */
+
+let currentFlower = null;
+
+function getRandomFlower(){
+
+  let newFlower;
+
+  do{
+
+    newFlower =
+      flowers[
+        Math.floor(
+          Math.random() * flowers.length
+        )
+      ];
+
+  }while(
+    flowers.length > 1 &&
+    newFlower === currentFlower
+  );
+
+  currentFlower = newFlower;
+
+  return newFlower;
+
+}
+
+
+/* =========================================
+   UPDATE FLOWER SECTION
+========================================= */
+
+function updateFlowerSection(flower){
+
+  document.getElementById("flowerDisplay")
+    .textContent = flower.emoji;
+
+  document.getElementById("flowerName")
+    .textContent = flower.name;
+
+  document.getElementById("flowerMeaning")
+    .textContent = flower.meaning;
+
+  document.getElementById("flowerMessage")
+    .textContent =
+      `"${flower.message}"`;
+
+}
+
+
+/* =========================================
+   SHOW FLOWER MODAL
+========================================= */
+
+function showFlowerModal(flower){
+
+  document.getElementById("modalFlower")
+    .textContent = flower.emoji;
+
+  document.getElementById("modalFlowerName")
+    .textContent = flower.name;
+
+  document.getElementById("modalMeaning")
+    .textContent = flower.meaning;
+
+  document.getElementById("modalMessage")
+    .textContent =
+      `"${flower.message}"`;
+
+  document.getElementById("flowerModal")
+    .classList.add("show");
+
+}
+
+
+/* =========================================
+   RECEIVE FLOWER
+========================================= */
+
+function receiveFlower(){
+
+  const flower =
+    getRandomFlower();
+
+  updateFlowerSection(flower);
+
+  showFlowerModal(flower);
+
+  createFlowerExplosion();
+
+}
+
+
+/* =========================================
+   CLOSE FLOWER
+========================================= */
+
+function closeFlower(){
+
+  document.getElementById("flowerModal")
+    .classList.remove("show");
+
+}
+
+
+/* =========================================
+   CLICK OUTSIDE MODAL
+========================================= */
+
+document
+  .getElementById("flowerModal")
+  .addEventListener("click", function(e){
+
+    if(e.target === this){
+
+      closeFlower();
+
+    }
+
+  });
+
+
+/* =========================================
+   FLOWER PARTICLE EFFECT
+========================================= */
+
+function createFlowerExplosion(){
+
+  const particles = [
+    "🌸",
+    "🌷",
+    "💗",
+    "✨",
+    "🌼",
+    "💐"
+  ];
+
+  for(let j = 0; j < 24; j++){
+
+    const e =
+      document.createElement("div");
+
+    e.className =
+      "flower-particle";
+
+    e.textContent =
+      particles[
+        Math.floor(
+          Math.random() * particles.length
+        )
+      ];
+
+    e.style.left =
+      (50 + Math.random() * 16 - 8) + "%";
+
+    e.style.top =
+      "48%";
+
+    e.style.fontSize =
+      (18 + Math.random() * 25) + "px";
+
+    document.body.appendChild(e);
+
+    requestAnimationFrame(() => {
+
+      e.style.transform =
+        `
+        translate(
+          ${(Math.random()*2-1)*320}px,
+          ${-100-Math.random()*400}px
+        )
+        rotate(${Math.random()*720}deg)
+        `;
+
+      e.style.opacity = "0";
+
+    });
+
+    setTimeout(() => {
+
+      e.remove();
+
+    },1500);
+
+  }
+
+}
+
+
+/* =========================================
+   WISH BUTTON
+========================================= */
 
 function celebrate(){
-const messages=[
-    "🌷 Chúc bạn 20/10 thật vui và thật nhiều yêu thương!",
-    "💖 Bạn xứng đáng với những điều tuyệt vời nhất!",
-    "✨ Mong hôm nay và mọi ngày đều có thật nhiều niềm vui!",
-    "🌸 Chúc bạn luôn xinh đẹp, tự tin và hạnh phúc!",
-    "🌹 Chúc bạn luôn được yêu thương, trân trọng và có thật nhiều khoảnh khắc đáng nhớ!",
-    "🦋 Mong mọi ước mơ của bạn đều dần trở thành hiện thực, mỗi ngày đều có một lý do để mỉm cười!"
-];
-  const toast=document.getElementById("toast");
-  toast.textContent=messages[Math.floor(Math.random()*messages.length)];
-  toast.classList.add("show");
-  setTimeout(()=>toast.classList.remove("show"),3500);
 
-  for(let j=0;j<18;j++){
-    const e=document.createElement("div");
-    e.textContent=["💗","🌸","✨","💐"][Math.floor(Math.random()*4)];
-    e.style.cssText=`position:fixed;left:${50+(Math.random()*20-10)}%;top:55%;
-      font-size:${18+Math.random()*22}px;z-index:30;pointer-events:none;
-      transition:1.2s ease-out;`;
+  const messages = [
+
+    "🌷 Chúc bạn 20/10 thật vui và thật nhiều yêu thương!",
+
+    "💖 Bạn xứng đáng với những điều tuyệt vời nhất!",
+
+    "✨ Mong hôm nay và mọi ngày đều có thật nhiều niềm vui!",
+
+    "🌸 Chúc bạn luôn xinh đẹp, tự tin và hạnh phúc!",
+
+    "🌹 Chúc bạn luôn được yêu thương, trân trọng và có thật nhiều khoảnh khắc đáng nhớ!",
+
+    "🦋 Mong mọi ước mơ của bạn đều dần trở thành hiện thực, mỗi ngày đều có một lý do để mỉm cười!"
+
+  ];
+
+  const toast =
+    document.getElementById("toast");
+
+  toast.textContent =
+    messages[
+      Math.floor(
+        Math.random() * messages.length
+      )
+    ];
+
+  toast.classList.add("show");
+
+  setTimeout(() => {
+
+    toast.classList.remove("show");
+
+  },3500);
+
+
+  for(let j = 0; j < 18; j++){
+
+    const e =
+      document.createElement("div");
+
+    e.textContent =
+      ["💗","🌸","✨","💐"][
+        Math.floor(Math.random()*4)
+      ];
+
+    e.style.cssText =
+      `
+      position:fixed;
+      left:${50+(Math.random()*20-10)}%;
+      top:55%;
+      font-size:${18+Math.random()*22}px;
+      z-index:30;
+      pointer-events:none;
+      transition:1.2s ease-out;
+      `;
+
     document.body.appendChild(e);
-    requestAnimationFrame(()=>{
-      e.style.transform=`translate(${(Math.random()*2-1)*260}px,${-150-Math.random()*300}px) rotate(${Math.random()*360}deg)`;
-      e.style.opacity="0";
+
+    requestAnimationFrame(() => {
+
+      e.style.transform =
+        `
+        translate(
+          ${(Math.random()*2-1)*260}px,
+          ${-150-Math.random()*300}px
+        )
+        rotate(${Math.random()*360}deg)
+        `;
+
+      e.style.opacity = "0";
+
     });
-    setTimeout(()=>e.remove(),1300);
+
+    setTimeout(() => {
+
+      e.remove();
+
+    },1300);
+
   }
+
 }
+
+
+/* =========================================
+   AUTO RANDOM FLOWER WHEN OPEN / REFRESH
+========================================= */
+
+window.addEventListener("load", () => {
+
+  const flower =
+    getRandomFlower();
+
+  updateFlowerSection(flower);
+
+  /*
+     Hiện bông hoa sau 1.2 giây.
+     Để người dùng nhìn thấy trang trước.
+  */
+
+  setTimeout(() => {
+
+    showFlowerModal(flower);
+
+    createFlowerExplosion();
+
+  },1200);
+
+});
+
 </script>
+
 </body>
 </html>
